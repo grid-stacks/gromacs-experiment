@@ -46,3 +46,13 @@ The configuration of the protein (-cp) is contained in the output of the previou
 
 
 
+## 5) Adding ion: assembling tpr file
+
+```
+gmx grompp -f ions.mdp -c 1aki_solv.gro -p topol.top -o ions.tpr -maxwarn 5
+```
+
+It will generate an atomic-level description of the system in the binary file ions.tpr.
+
+
+
