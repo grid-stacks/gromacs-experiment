@@ -36,3 +36,13 @@ The above command centers the protein in the box (-c), and places it at least 1.
 
 
 
+## 4) Solvation: solvating with water
+
+```
+gmx solvate -cp 1aki_newbox.gro -cs spc216.gro -o 1aki_solv.gro -p topol.top
+```
+
+The configuration of the protein (-cp) is contained in the output of the previous editconf step, and the configuration of the solvent (-cs) is part of the standard GROMACS installation. 
+
+
+
