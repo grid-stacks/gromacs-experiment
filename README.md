@@ -56,3 +56,25 @@ It will generate an atomic-level description of the system in the binary file io
 
 
 
+## 6) Adding ion: adding ions to neutralize
+
+In CLI:
+
+```
+gmx genion -s ions.tpr -o 1aki_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+```
+
+After prompting 13 Sol was selected.
+
+In Jupyter Notebook:
+
+```
+printf "SOL" | gmx genion -s ions.tpr -o 1aki_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+```
+
+In the genion command, we provide the structure/state file (-s) as input, generate a .gro file as output (-o), process the topology (-p) to reflect the removal of water molecules and addition of ions, define positive and negative ion names (-pname and -nname, respectively), and tell genion to add only the ions necessary to neutralize the net charge on the protein by adding the correct number of negative ions (-neutral, which in this case will add 8 Cl- ions to offset the +8 charge on the protein).
+
+
+
+
+
