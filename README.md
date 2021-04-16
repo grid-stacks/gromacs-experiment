@@ -84,5 +84,15 @@ gmx grompp -f minim.mdp -c 1aki_solv_ions.gro -p topol.top -o em.tpr
 
 
 
+## 8) Energy minimization: carry out the EM
+
+```
+gmx mdrun -ntmpi 2 -ntomp 1 -deffnm em -v -pin on [-nb gpu]
+```
+
+-nb gpu is for running in GPU.
+
+
+
 
 
