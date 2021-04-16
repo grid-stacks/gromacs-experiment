@@ -76,5 +76,13 @@ In the genion command, we provide the structure/state file (-s) as input, genera
 
 
 
+## 7) Energy minimization: assembling the binary input
+
+```
+gmx grompp -f minim.mdp -c 1aki_solv_ions.gro -p topol.top -o em.tpr
+```
+
+
+
 
 
