@@ -150,6 +150,12 @@ gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
 
 
 
+## 12) Equilibration: carry out MD run
+
+```
+gmx mdrun -deffnm nvt
+```
+
 
 
 
